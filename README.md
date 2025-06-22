@@ -32,8 +32,6 @@ ecommerce-platform/
 │   ├── logistics/                # Coordinación de envíos y tracking
 │   ├── integrations/             # Orquestación de flujos hacia servicios externos
 │   └── reports/                  # Generación de estadísticas e informes basados en eventos
-└── docs/
-    └── ARQUITECTURA.md           # Diagramas C4, justificación y requisitos funcionales y no funcionales
 ```
 
 **Justificación de Carpeta**
@@ -42,7 +40,6 @@ ecommerce-platform/
 * `infrastructure/`: Aíslan detalles de configuración de broker, base de datos, cache y servicios externos.
 * `services/`: Cada dominio (catalog, users, cart…) es un microservicio autónomo que sigue el **patrón hexagonal** (Ports & Adapters) y reacciona o emite eventos.
 * `k8s/` & `docker-compose.yml`: Facilitan orquestación local y despliegue en producción, garantizando **Availability** y **Elasticity**.
-* `docs/`: Reúne toda la documentación de arquitectura, diagramas y justificaciones.
 
 ---
 
