@@ -1,4 +1,6 @@
+import { User } from "../domain/User";
+
 export interface UserRepository {
-  save(user: { id: string; name: string }): Promise<void>;
-  findById(id: string): Promise<{ id: string; name: string } | null>;
+  save(user: User): Promise<void>;
+  findById(id: string): Promise<User | null>;
 }
